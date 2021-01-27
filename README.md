@@ -12,8 +12,8 @@ Usando o MySQL Workbench, selecione _File_, _Run Script SQL..._.
 
 Selecione o arquivo desejado:
 
-* Somente estrutura, em [`scripts/top5.sql`](scripts/top5.sql)
-* Estrutura e dados de exemplo, em [`scripts/top5.production.sql`](scripts/top5.production.sql)
+* Somente estrutura, em [`scripts/top5.production.sql`](scripts/top5.production.sql)
+* Estrutura e dados de exemplo, em [`scripts/top5.sql`](scripts/top5.sql)
 
 Selecione o conjunto de caracteres `utf8` e execute clicando em _Run_.
 
