@@ -24,7 +24,7 @@ _Se preferir, você pode usar outro cliente, como o DBeaver, por exemplo._
 ## Carregando com Docker
 
 ```
-docker run -p xxxx:3306 -e MYSQL_ROOT_PASSWORD=yyyy teste
+docker run -p xxxx:3306 -e MYSQL_ROOT_PASSWORD=yyyy nome-do-container
 ```
 
 Substitua `xxxx` pela porta de acesso desejada, e `yyyy` pela senha desejada para o usuário `root`.
