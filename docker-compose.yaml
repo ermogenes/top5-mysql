@@ -1,0 +1,22 @@
+# Docker Compose file
+## Login = root, Password = secret
+version: '3.9'
+services:
+  db:
+    build: .
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: top5
+    ports:
+      - 33306:3306
+    volumes:
+      - data:/var/lib/mysql
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  data:
