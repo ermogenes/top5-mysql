@@ -23,17 +23,30 @@ _Se preferir, você pode usar outro cliente, como o DBeaver, por exemplo._
 
 ## Carregando com Docker
 
+#### Utilizando a imagem disponível no Docker Hub
+
 ```
-docker run -p xxxx:3306 -e MYSQL_ROOT_PASSWORD=yyyy nome-do-container
+docker run -p xxxx:3306 -e MYSQL_ROOT_PASSWORD=yyyy ermogenes/top5-mysql
 ```
 
 Substitua `xxxx` pela porta de acesso desejada, e `yyyy` pela senha desejada para o usuário `root`.
 
-Ou use o Docker Compose para subir juntamente com uma instância do Adminer em localhost:8080 (acesso ao MySQL com senha `secret` na porta 33306).
+#### Construindo a partir do `Dockerfile` local
+
+```
+docker build -t top5-mysql-local .
+docker run -p xxxx:3306 -e MYSQL_ROOT_PASSWORD=yyyy top5-mysql-local
+```
+
+#### Subindo juntamente com o Adminer, usando o Docker Compose
 
 ```
 docker-compose up
 ```
+
+* Adminer em http://localhost:8080
+* MySQL em `33306`
+* Usuário `root`, senha `secret`
 
 ## Modelo de dados
 
