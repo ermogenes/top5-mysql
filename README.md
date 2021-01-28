@@ -29,7 +29,7 @@ docker run -p xxxx:3306 -e MYSQL_ROOT_PASSWORD=yyyy nome-do-container
 
 Substitua `xxxx` pela porta de acesso desejada, e `yyyy` pela senha desejada para o usuário `root`.
 
-Ou use o Docker Compose para subir juntamente com uma instância do Adminer (senha `secret`, porta 33306).
+Ou use o Docker Compose para subir juntamente com uma instância do Adminer em localhost:8080 (acesso ao MySQL com senha `secret` na porta 33306).
 
 ```
 docker-compose up
